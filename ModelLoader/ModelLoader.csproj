@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5433F33F-BF07-4445-87E9-4DDDF21EB8F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModelLoader</RootNamespace>
+    <AssemblyName>ModelLoader</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\AABB.cs" />
+    <Compile Include="Common\BoundingVolume.cs" />
+    <Compile Include="Common\Color4F.cs" />
+    <Compile Include="Common\QuaternionF.cs" />
+    <Compile Include="HMF\HeightMap.cs" />
+    <Compile Include="HMF\HMF.cs" />
+    <Compile Include="I2N\I2N.cs" />
+    <Compile Include="IWriteable.cs" />
+    <Compile Include="Loader.cs" />
+    <Compile Include="Common\OBB.cs" />
+    <Compile Include="Meshes\SkinVertex.cs" />
+    <Compile Include="Meshes\Mesh.cs" />
+    <Compile Include="Meshes\SubMesh.cs" />
+    <Compile Include="Meshes\Vertex.cs" />
+    <Compile Include="MTF\MTF.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\Sphere.cs" />
+    <Compile Include="SAF\RTF.cs" />
+    <Compile Include="SAF\SAF.cs" />
+    <Compile Include="SAF\SkeletalAnimation.cs" />
+    <Compile Include="SAF\Skeleton.cs" />
+    <Compile Include="SAF\SkeletonJoint.cs" />
+    <Compile Include="SAF\SkeletonJointKeyframe.cs" />
+    <Compile Include="SAF\SkeletonJointKeyframeSequence.cs" />
+    <Compile Include="SMF\SMF.cs" />
+    <Compile Include="TMF\TMF.cs" />
+    <Compile Include="Common\Vector2F.cs" />
+    <Compile Include="Common\Vector3F.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
